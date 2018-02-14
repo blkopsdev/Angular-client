@@ -1,0 +1,490 @@
+#
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2018-01-15T21:57:38.418906\n"
+"PO-Revision-Date: 2018-01-15T21:57:38.643591\n"
+"Language: uz\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /tmp/repo/src/cases/create-case.html:17
+#: /tmp/repo/src/cases/edit-case.html:21
+msgid "About"
+msgstr "Haqida"
+
+#: /tmp/repo/src/users/create-user.html:70
+msgid "Add"
+msgstr "Qo&#39;shish"
+
+#: /tmp/repo/src/users/add-user.controller.js:14
+msgid "Add User"
+msgstr "Foydalanuvchi qo&#39;shish"
+
+#: /tmp/repo/src/users/create-user.html:71
+msgid "Adding..."
+msgstr "Qo&#39;shib ..."
+
+#: /tmp/repo/src/profile/profile.html:107
+#: /tmp/repo/src/profile/profile.html:119
+#: /tmp/repo/src/profile/profile.html:121
+#: /tmp/repo/src/profile/profile.html:122
+msgid "Address"
+msgstr "Manzil"
+
+#: /tmp/repo/src/profile/profile.html:110
+#: /tmp/repo/src/profile/profile.html:126
+#: /tmp/repo/src/profile/profile.html:128
+#: /tmp/repo/src/profile/profile.html:129
+msgid "Address 2"
+msgstr "Manzil 2"
+
+#: /tmp/repo/src/root/root.html:111
+msgid ""
+"All rights\n"
+"            reserved"
+msgstr "Barcha huquqlar himoyalangan"
+
+#: /tmp/repo/src/login/login.html:21
+msgid ""
+"All rights\n"
+"        reserved"
+msgstr "Barcha huquqlar himoyalangan"
+
+#: /tmp/repo/src/cases/assign-user.controller.js:20
+msgid "Assign User"
+msgstr "Foydalanuvchi belgilash"
+
+#: /tmp/repo/src/groups/create-group.html:24
+#: /tmp/repo/src/groups/edit-group.html:24
+msgid "Audios"
+msgstr "Audio"
+
+#: /tmp/repo/src/profile/profile.html:11
+msgid "Basic"
+msgstr "Asosiy"
+
+#: /tmp/repo/src/cases/assign-case.html:39
+#: /tmp/repo/src/cases/create-case.html:50
+#: /tmp/repo/src/cases/edit-case.html:54
+#: /tmp/repo/src/groups/create-group.html:70
+#: /tmp/repo/src/groups/edit-group.html:82
+#: /tmp/repo/src/profile/profile.html:222 /tmp/repo/src/users/add-user.html:28
+#: /tmp/repo/src/users/create-user.html:73
+#: /tmp/repo/src/users/edit-user.html:45
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+#: /tmp/repo/src/cases/assign-case.html:17
+msgid "Case Assign"
+msgstr "Ishni topshiring"
+
+#: /tmp/repo/src/cases/create-case.html:13
+#: /tmp/repo/src/cases/edit-case.html:17
+msgid "Case Info"
+msgstr "Case ma&#39;lumoti"
+
+#: /tmp/repo/src/cases/assign-case.html:8 /tmp/repo/src/cases/edit-case.html:8
+msgid "Case not found!"
+msgstr "Vaziyat topilmadi!"
+
+#: /tmp/repo/src/index.html:5 /tmp/repo/src/login/login.html:21
+#: /tmp/repo/src/root/root.html:111
+msgid "CaseActive"
+msgstr "CaseActive"
+
+#: /tmp/repo/src/cases/cases.controller.js:31 /tmp/repo/src/root/root.html:21
+msgid "Cases"
+msgstr "Voqealar"
+
+#: /tmp/repo/src/profile/profile.html:113
+msgid ""
+"City\n"
+"                    /Locality"
+msgstr "Shahar / joy"
+
+#: /tmp/repo/src/profile/profile.html:133
+#: /tmp/repo/src/profile/profile.html:135
+#: /tmp/repo/src/profile/profile.html:136
+msgid "City/Locality"
+msgstr "Shahar / joy"
+
+#: /tmp/repo/src/cases/verify.modal.html:15
+msgid "Code"
+msgstr "Kod"
+
+#: /tmp/repo/src/profile/profile.html:82 /tmp/repo/src/profile/profile.html:90
+#: /tmp/repo/src/profile/profile.html:92 /tmp/repo/src/profile/profile.html:93
+msgid "Company Name"
+msgstr "kopmaniya nomi"
+
+#: /tmp/repo/src/profile/profile.html:100
+#: /tmp/repo/src/profile/profile.html:85 /tmp/repo/src/profile/profile.html:97
+#: /tmp/repo/src/profile/profile.html:99
+msgid "Company Title"
+msgstr "Kompaniya nomi"
+
+#: /tmp/repo/src/cases/cases.html:199
+msgid "Confirm Password"
+msgstr "Parolni tasdiqlang"
+
+#: /tmp/repo/src/root/root.html:24
+msgid "Content"
+msgstr "Kontent"
+
+#: /tmp/repo/src/users/add-user.html:25
+msgid "Continue"
+msgstr "Davom etish"
+
+#: /tmp/repo/src/root/root.html:7
+msgid "Cookies are disabled. Please enable it."
+msgstr "Cookie o&#39;chirib qo&#39;yilgan. Iltimos, uni yoqing."
+
+#: /tmp/repo/src/profile/profile.html:145
+#: /tmp/repo/src/profile/profile.html:160
+#: /tmp/repo/src/profile/profile.html:162
+#: /tmp/repo/src/profile/profile.html:164
+#: /tmp/repo/src/profile/profile.html:166
+msgid "Country"
+msgstr "Davlat"
+
+#: /tmp/repo/src/cases/create-case.html:46
+#: /tmp/repo/src/groups/create-group.html:66
+msgid "Create"
+msgstr "Yaratmoq"
+
+#: /tmp/repo/src/cases/create-case.controller.js:16
+msgid "Create Case"
+msgstr "Ish yarating"
+
+#: /tmp/repo/src/groups/create-group.controller.js:16
+msgid "Create Group"
+msgstr "Guruh yaratish"
+
+#: /tmp/repo/src/users/create-user.controller.js:16
+msgid "Create User"
+msgstr "Foydalanuvchi yarat"
+
+#: /tmp/repo/src/cases/cases.html:224
+msgid "Create a case for a business"
+msgstr "Biznes uchun ish yarating"
+
+#: /tmp/repo/src/users/users.html:9
+msgid "Create an user"
+msgstr "Foydalanuvchi yaratish"
+
+#: /tmp/repo/src/cases/create-case.html:47
+#: /tmp/repo/src/groups/create-group.html:67
+msgid "Creating..."
+msgstr "Yaratish ..."
+
+#: /tmp/repo/src/cases/cases.html:167
+msgid "Current Password"
+msgstr "hozirgi maxfiy so&#39;z"
+
+#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/root/root.html:19
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: /tmp/repo/src/cases/create-case.html:29
+#: /tmp/repo/src/cases/edit-case.html:33
+msgid "Date Opened"
+msgstr "Sana ochildi"
+
+#: /tmp/repo/src/profile/profile.html:44 /tmp/repo/src/profile/profile.html:52
+#: /tmp/repo/src/profile/profile.html:54 /tmp/repo/src/profile/profile.html:55
+msgid "Date of Birth"
+msgstr "Tug&#39;ilgan sana"
+
+#: /tmp/repo/src/groups/create-group.html:29
+#: /tmp/repo/src/groups/edit-group.html:29
+msgid "Documents"
+msgstr "Hujjatlar"
+
+#: /tmp/repo/src/cases/edit-case.controller.js:15
+msgid "Edit Case"
+msgstr "Tartibga solish ishi"
+
+#: /tmp/repo/src/groups/edit-group.controller.js:16
+msgid "Edit Group"
+msgstr "Guruhni tahrirlash"
+
+#: /tmp/repo/src/users/edit-user.controller.js:16
+msgid "Edit User"
+msgstr "Foydalanuvchini tahrirlash"
+
+#: /tmp/repo/src/cases/cases.html:78 /tmp/repo/src/cases/verify.modal.html:5
+#: /tmp/repo/src/users/add-user.html:15
+#: /tmp/repo/src/users/create-user.html:28
+#: /tmp/repo/src/users/create-user.html:30
+msgid "Email"
+msgstr "E-pochta"
+
+#: /tmp/repo/src/users/create-user.html:16
+#: /tmp/repo/src/users/create-user.html:18
+msgid "Family Name"
+msgstr "Familiya"
+
+#: /tmp/repo/src/groups/create-group.html:34
+#: /tmp/repo/src/groups/edit-group.html:34
+msgid "Files"
+msgstr "Fayllar"
+
+#: /tmp/repo/src/profile/profile.html:20 /tmp/repo/src/profile/profile.html:28
+#: /tmp/repo/src/profile/profile.html:30 /tmp/repo/src/profile/profile.html:31
+msgid "First Name"
+msgstr "Ism"
+
+#: /tmp/repo/src/profile/profile.html:47 /tmp/repo/src/profile/profile.html:63
+#: /tmp/repo/src/profile/profile.html:66 /tmp/repo/src/profile/profile.html:71
+msgid "Gender"
+msgstr "Jins"
+
+#: /tmp/repo/src/users/create-user.html:21
+#: /tmp/repo/src/users/create-user.html:23
+msgid "Given Name"
+msgstr "Ismi"
+
+#: /tmp/repo/src/groups/create-group.html:13
+#: /tmp/repo/src/groups/edit-group.html:13
+msgid "Group Info"
+msgstr "Guruh haqida ma&#39;lumot"
+
+#: /tmp/repo/src/groups/groups.controller.js:27
+#: /tmp/repo/src/root/root.html:23
+msgid "Groups"
+msgstr "Guruhlar"
+
+#: /tmp/repo/src/root/root.html:34
+msgid "Hello"
+msgstr "Salom"
+
+#: /tmp/repo/src/groups/create-group.html:42
+#: /tmp/repo/src/groups/edit-group.html:42
+msgid "Images"
+msgstr "Rasmlar"
+
+#: /tmp/repo/src/root/root.html:3
+msgid "Javascript are disabled. Please enable it."
+msgstr "Javascript o&#39;chirilgan. Iltimos, uni yoqing."
+
+#: /tmp/repo/src/profile/profile.html:185
+#: /tmp/repo/src/profile/profile.html:187
+#: /tmp/repo/src/profile/profile.html:192
+#: /tmp/repo/src/users/create-user.html:35
+#: /tmp/repo/src/users/create-user.html:40
+#: /tmp/repo/src/users/create-user.html:46
+msgid "Language"
+msgstr "Til"
+
+#: /tmp/repo/src/profile/profile.html:181
+msgid "Language &amp; Region"
+msgstr "Til va mintaqa"
+
+#: /tmp/repo/src/profile/profile.html:23 /tmp/repo/src/profile/profile.html:35
+#: /tmp/repo/src/profile/profile.html:37 /tmp/repo/src/profile/profile.html:38
+msgid "Last Name"
+msgstr "Familiya"
+
+#: /tmp/repo/src/cases/verify.modal.html:46
+msgid "Later"
+msgstr "Keyinchalik"
+
+#: /tmp/repo/src/cases/assign-case.html:4 /tmp/repo/src/cases/cases.html:219
+#: /tmp/repo/src/cases/create-case.html:4 /tmp/repo/src/cases/edit-case.html:4
+#: /tmp/repo/src/groups/create-group.html:4
+#: /tmp/repo/src/groups/edit-group.html:4 /tmp/repo/src/groups/groups.html:4
+#: /tmp/repo/src/profile/profile.html:3 /tmp/repo/src/users/add-user.html:4
+#: /tmp/repo/src/users/create-user.html:4 /tmp/repo/src/users/edit-user.html:4
+#: /tmp/repo/src/users/users.html:4
+msgid "Loading..."
+msgstr "Yuklanmoqda ..."
+
+#: /tmp/repo/src/profile/profile.html:104
+msgid "Location"
+msgstr "Manzil"
+
+#: /tmp/repo/src/root/root.html:42
+msgid "Log out"
+msgstr "Chiqish"
+
+#: /tmp/repo/src/root/root.html:27
+msgid "Logout"
+msgstr "Chiqish"
+
+#: /tmp/repo/src/login/login.html:20 /tmp/repo/src/root/root.html:110
+msgid "Made with"
+msgstr "Ishlab chiqarilgan"
+
+#: /tmp/repo/src/groups/create-group.html:17
+#: /tmp/repo/src/groups/edit-group.html:17
+msgid "Name"
+msgstr "Ism"
+
+#: /tmp/repo/src/cases/cases.html:180
+msgid "New Password"
+msgstr "Yangi Parol"
+
+#: /tmp/repo/src/cases/cases.html:223
+msgid "No cases found."
+msgstr "Hech narsa topilmadi."
+
+#: /tmp/repo/src/groups/groups.html:8
+msgid "No group found."
+msgstr "Hech qanday guruh topilmadi."
+
+#: /tmp/repo/src/users/users.html:8
+msgid "No user found."
+msgstr "Hech qanday foydalanuvchi topilmadi."
+
+#: /tmp/repo/src/profile/profile.html:79
+msgid "Occupation"
+msgstr "Kasbingiz"
+
+#: /tmp/repo/src/cases/verify.modal.html:6
+msgid "Phone"
+msgstr "Telefon"
+
+#: /tmp/repo/src/profile/profile.controller.js:30
+msgid "Profile Settings"
+msgstr "Profil sozlamalari"
+
+#: /tmp/repo/src/cases/verify.modal.html:37
+msgid "Resend Code"
+msgstr "Kodni qayta yuborish"
+
+#: /tmp/repo/src/cases/verify.modal.html:38
+msgid "Resending"
+msgstr "Qayta yuborish"
+
+#: /tmp/repo/src/cases/assign-case.html:35
+#: /tmp/repo/src/cases/edit-case.html:50
+#: /tmp/repo/src/groups/edit-group.html:78
+#: /tmp/repo/src/users/edit-user.html:42
+msgid "Save"
+msgstr "Saqlash"
+
+#: /tmp/repo/src/cases/assign-case.html:36
+#: /tmp/repo/src/cases/edit-case.html:51
+#: /tmp/repo/src/groups/edit-group.html:79
+#: /tmp/repo/src/users/edit-user.html:43
+msgid "Saving..."
+msgstr "Saqlanmoqda ..."
+
+#: /tmp/repo/src/root/root.html:25
+msgid "Settings"
+msgstr "Sozlamalar"
+
+#: /tmp/repo/src/login/login.html:10
+msgid "Sign In"
+msgstr "Tizimga kirish"
+
+#: /tmp/repo/src/profile/profile.html:142
+#: /tmp/repo/src/profile/profile.html:155
+#: /tmp/repo/src/profile/profile.html:156
+msgid "State/Region"
+msgstr "Shtat / Hudud"
+
+#: /tmp/repo/src/cases/create-case.html:34
+#: /tmp/repo/src/cases/edit-case.html:38
+msgid "Status"
+msgstr "Holat"
+
+#: /tmp/repo/src/cases/create-case.html:22
+#: /tmp/repo/src/cases/edit-case.html:26
+msgid "Tag Id"
+msgstr "Tag identifikatori"
+
+#: /tmp/repo/src/login/login.html:22 /tmp/repo/src/root/root.html:112
+msgid "Terms of Use"
+msgstr "Foydalanish shartlari"
+
+#: /tmp/repo/src/profile/profile.html:201
+#: /tmp/repo/src/profile/profile.html:203
+#: /tmp/repo/src/profile/profile.html:208
+#: /tmp/repo/src/users/create-user.html:51
+#: /tmp/repo/src/users/create-user.html:56
+#: /tmp/repo/src/users/create-user.html:62
+msgid "Timezone"
+msgstr "Vaqt zonasi"
+
+#: /tmp/repo/src/profile/profile.html:219
+msgid "Update"
+msgstr "Yangilash"
+
+#: /tmp/repo/src/profile/profile.html:220
+msgid "Updating"
+msgstr "Yangilanmoqda"
+
+#: /tmp/repo/src/users/create-user.html:12
+#: /tmp/repo/src/users/edit-user.html:16
+msgid "User Info"
+msgstr "Foydalanuvchi haqida ma&#39;lumot"
+
+#: /tmp/repo/src/users/edit-user.html:29 /tmp/repo/src/users/edit-user.html:35
+msgid "User Status"
+msgstr "Foydalanuvchi Status"
+
+#: /tmp/repo/src/users/edit-user.html:20 /tmp/repo/src/users/edit-user.html:26
+msgid "User Type"
+msgstr "Foydalanuvchi turi"
+
+#: /tmp/repo/src/users/edit-user.html:8
+msgid "User not found."
+msgstr "Foydalanuvchining topilmadi."
+
+#: /tmp/repo/src/root/root.html:22 /tmp/repo/src/users/users.controller.js:31
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+#: /tmp/repo/src/cases/verify.modal.html:28
+msgid "Verification Code"
+msgstr "Tasdiq kodi"
+
+#: /tmp/repo/src/cases/verify.modal.html:17
+msgid "Verification Code is required"
+msgstr "Tasdiqlash kodi talab qilinadi"
+
+#: /tmp/repo/src/cases/verify.modal.html:22
+msgid "Verification Code should be a number"
+msgstr "Tasdiqlash kodi raqam bo&#39;lishi kerak"
+
+#: /tmp/repo/src/cases/verify.modal.html:43
+msgid "Verify"
+msgstr "Tasdiqlang"
+
+#: /tmp/repo/src/cases/verify.modal.html:3
+msgid "Verify Your"
+msgstr "O&#39;zingizni tasdiqlang"
+
+#: /tmp/repo/src/cases/verify.modal.html:44
+msgid "Verifying..."
+msgstr "Tasdiqlanmoqda ..."
+
+#: /tmp/repo/src/groups/create-group.html:47
+#: /tmp/repo/src/groups/edit-group.html:47
+msgid "Videos"
+msgstr "Videolar"
+
+#: /tmp/repo/src/users/add-user.html:26
+msgid "Working..."
+msgstr "Ishlayapti ..."
+
+#: /tmp/repo/src/profile/profile.html:148
+#: /tmp/repo/src/profile/profile.html:174
+#: /tmp/repo/src/profile/profile.html:175
+#: /tmp/repo/src/profile/profile.html:176
+msgid "Zip/Postal Code"
+msgstr "Pochta indeksi"
+
+#: /tmp/repo/src/login/login.html:20
+msgid "in New York City"
+msgstr "Nyu-Yorkda"
+
+#: /tmp/repo/src/login/login.html:20
+msgid "love"
+msgstr "sevgi"
+
+#: /tmp/repo/src/cases/assign-case.html:22
+msgid "{{group.name}}"
+msgstr "{{group.name}}"

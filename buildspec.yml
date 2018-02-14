@@ -1,0 +1,10 @@
+version: 0.2
+
+env:
+  variables:
+    develop_role: "arn:aws:iam::144052511164:role/codebuild"
+
+phases:
+  build:
+    commands:
+      - bash /tmp/init.sh --translate=js --execute=angular.py --name=manage
