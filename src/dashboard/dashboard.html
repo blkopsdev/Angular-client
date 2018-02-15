@@ -1,0 +1,72 @@
+<article id="content">
+
+    <!--div ng-show="vm.loading && !vm.apps && !vm.notFoundApp">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+    <div ng-if="vm.notFoundApp" class="app-not-found">
+        <p class="" ca-error="vm.notFoundApp" location="!"></p>
+    </div>
+
+    <div ng-show="vm.emptyApps && !vm.loading && !vm.notFoundApp" class="text-center">
+        <p translate>No apps found. </p>
+        <a ui-sref="base.createApp" translate>
+            Create an app for a business
+        </a>
+    </div>
+
+    <p class="notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+    {{vm.title}}
+
+    <table class="table-a" ng-if="vm.apps && !vm.loading && !vm.emptyApps">
+        <tr>
+            <th style="width:100px"></th>
+            <th translate>Company Name</th>
+            <th translate>Type</th>
+            <th translate>Status</th>
+            <th></th>
+        </tr>
+
+        <tr ng-repeat="app in vm.apps track by app.host_id" ng-if="vm.apps && !vm.loading">
+            <td style="width:100px">
+                <img ng-src="{{::app.logo}}" style="height:20px !important"></td>
+            <td>{{::app.company_name}}</td>
+            <td ng-switch="::app.user_type">
+                <span translate ng-switch-when="admin">admin</span>
+                <span translate ng-switch-when="client">client</span>
+            </td>
+            <td ng-switch="::app.user_status">
+                <span translate ng-switch-when="1">active</span>
+                <span translate ng-switch-when="0">inactive</span>
+            <td><a class="btn btn-go"
+                   ng-click="vm.openApp(app)" translate>GO</a></td>
+        </tr>
+
+    </table-->
+
+
+
+    <div class="module-e">
+    </div>
+
+
+    <h2 class="header-d">04/12/2017-04/19/2017</h2>
+    <ul class="list-d">
+        <li><span class="title">Users</span> 33</li>
+        <li><span class="title">Cases</span> 42</li>
+        <li><span class="title">Posts</span> 416</li>
+        <li><span class="title">Events</span> 0</li>
+
+        <li class="img"><img src="/images/illustrations/b.svg" alt="Placeholder" width="148" height="44"></li>
+    </ul>
+    <h2 class="header-d">All Stats</h2>
+    <ul class="list-d">
+        <li><span class="title">Users</span> 11555</li>
+        <li><span class="title">Cases</span> 13628</li>
+        <li><span class="title">Posts</span> 79467</li>
+        <li><span class="title">Events</span> 1697</li>
+
+        <li class="img"><img src="/images/illustrations/c.svg" alt="" width="118" height="76"></li>
+    </ul>
+</article>
+

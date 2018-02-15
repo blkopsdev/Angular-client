@@ -1,0 +1,115 @@
+<div id="root" root-fixer ng-class="{'logged-in': adminService.isLoggedIn(), 'logged-out': !adminService.isLoggedIn()}" class="body-content">
+    <noscript>
+        <div style="text-align:center; padding:10px; background:red;color:#fff;" translate>
+            Javascript are disabled. Please enable it.
+        </div>
+    </noscript>
+    <div id="cookie-msg" style="display:none; text-align:center; padding:10px; background:red;color:#fff;" translate>
+        Cookies are disabled. Please enable it.
+    </div>
+    <header id="top" ng-class="{active: vm.activeMobileMenu}">
+        <h1>
+            <a class="top-icon" accesskey="h" ui-sref="base.login">
+                <img ng-src="{{::getCdnImageUrl('logo.png','png',165)}}"></img>
+            </a>
+        </h1>
+
+        <nav ng-if="adminService.isLoggedIn()" id="nav">
+            <ul>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="1" ui-sref="base.home" translate>Dashboard</a>
+                    <em>(1)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="2" ui-sref="base.cases" translate>Cases</a> <em>(2)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.users" translate>Users</a> <em>(4)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.groups" translate>Groups</a> <em>(4)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.profile" translate>Content</a> <em>(4)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.profile" translate>Settings</a> <em>(4)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="mobile-only">
+                    <a accesskey="8" ng-click="vm.logout()" translate>Logout</a> <em>(8)</em>
+                </li>
+            </ul>
+        </nav>
+        <nav ng-if="adminService && adminService.isLoggedIn()" id="user">
+            <ul>
+                <li><a accesskey="6" ui-sref="base.account">
+                    <span><span translate>Hello</span>{{adminService.userData.name?', ' +
+                        adminService.userData.name: ''}}</span>
+
+                    <img class="avatar-icon"
+                         ng-src="{{adminService.getAvatarUrl('30x30')}}"
+                         width="30"
+                         height="30"></a>
+                    <em>(6)</em></li>
+                <li><a accesskey="8" ng-click="vm.logout()"><span class="hidden" translate>Log out</span> <i
+                        class=" icon-power-outline"></i></a> <em>(8)</em></li>
+            </ul>
+        </nav>
+        <nav id="sub" ng-if="adminService.isLoggedIn() && pageSubMenu == 'dashboard'">
+            <!-- dynamic pageSubTitle goes here -->
+            <form action="./" method="post">
+                <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
+                <p>
+                    <label for="dashboard-views" class="hidden">Sort by</label>
+                    <select id="dashboard-views" name="dashboard-views">
+                        <option value="page-views" selected>Page Views</option>
+                        <option value="page-visitors">Page Visitors</option>
+                        <option value="unique-visitors">Unique Visitors</option>
+                    </select>
+                </p>
+            </form>
+            <form action="" method="get">
+                <p>
+                    <label for="tb">From</label>
+                    <input type="date" id="tb" name="sday" value="04/12/2017" >
+                </p>
+                <p>
+                    <label for="tc">To</label>
+                    <input type="date" id="tc" name="eday" value="04/19/2017" >
+                </p>
+                <p class="submit">
+                    <button type="submit">Submit</button>
+                </p>
+            </form>
+            <div class="menu" ng-show="adminService.isLoggedIn()" ng-click="vm.activeMobileMenu=true">
+            </div>
+        </nav>
+        <nav id="sub" ng-if="adminService.isLoggedIn() && (pageSubMenu == 'cases' || pageSubMenu == 'create-case'|| pageSubMenu == 'edit-case')">
+            <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
+            <p class="link-a a" ng-if="pageSubMenu == 'cases'"><a ui-sref="base.createCase"><i class="icon-plus"></i> Create</a></p>
+        </nav>
+
+        <nav id="sub" ng-if="adminService.isLoggedIn() && (pageSubMenu == 'users' || pageSubMenu == 'add-user'|| pageSubMenu == 'edit-user')">
+            <ul>
+                <li class="active"><a href="">Users</a></li>
+                <li ><a href="">Clients</a></li>
+                <li ><a href="">Staff</a></li>
+                <li ><a href="">Associates</a></li>
+            </ul>
+            <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
+            <p class="link-a a" ng-if="pageSubMenu == 'users'"><a ui-sref="base.addUser"><i class="icon-plus"></i> Add</a></p>
+        </nav>
+
+        <nav id="sub" ng-if="adminService.isLoggedIn() && (pageSubMenu == 'groups' || pageSubMenu == 'create-group'|| pageSubMenu == 'edit-group')">
+            <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
+            <p class="link-a a" ng-if="pageSubMenu == 'groups'"><a ui-sref="base.createGroup"><i class="icon-plus"></i> Create</a></p>
+        </nav>
+
+    </header>
+
+    <div id="systemErrorException">
+        <div class="exception"
+             ng-if="systemErrorException">
+            <p class="notice-a" ca-translate="systemErrorException"></p>
+        </div>
+    </div>
+
+    <div class="main-container" ui-view autoscroll>
+    </div>
+
+    <footer id="footer" ng-if="adminService.isLoggedIn()">
+        <img class="logo" ng-src="{{::getCdnImageUrl('logo.png','png',165)}}"></img>
+        <p><span translate>Made with</span> <i class="icon-heart overlay-a"></i> <span class="hidden">love</span> in New York City<br> ©
+            <span translate>CaseActive</span> <span class="date">{{currentYear}}</span> <span translate>All rights
+            reserved</span> | <a ng-href="{{TERMS_OF_USE_URL}}" translate>Terms of Use</a>
+        </p>
+    </footer>
+</div>
