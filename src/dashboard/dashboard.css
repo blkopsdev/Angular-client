@@ -1,0 +1,43 @@
+/* custom*/
+#sub .sub-icon:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    width: 148px;
+    height: 43px;
+    background: url(/images/illustrations/b.svg) no-repeat;
+    background-size: 100% 100%;
+}
+.app-not-found > p {
+    margin: 0 auto;
+}
+a.btn-go {
+    min-width: auto !important;
+}
+
+@media only screen and (max-width: 47.5em) {
+    #sub .sub-icon {
+        position: absolute;
+        left: -3000em;
+        top: 0;
+        bottom: inherit;
+        right: inherit;
+    }
+}
+
+#up-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    text-indent: 0 !important;
+    line-height: 180px;
+}
