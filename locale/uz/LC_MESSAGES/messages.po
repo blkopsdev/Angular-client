@@ -181,7 +181,7 @@ msgstr "Yaratish ..."
 msgid "Current Password"
 msgstr "hozirgi maxfiy so&#39;z"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Dashboard"

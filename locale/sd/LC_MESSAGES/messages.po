@@ -181,7 +181,7 @@ msgstr "ٺاهڻ"
 msgid "Current Password"
 msgstr "موجوده پاس ورڊ"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "ڊيش بورڊ"

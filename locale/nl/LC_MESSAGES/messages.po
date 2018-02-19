@@ -181,7 +181,7 @@ msgstr "Het creëren van ..."
 msgid "Current Password"
 msgstr "huidig ​​wachtwoord"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Dashboard"

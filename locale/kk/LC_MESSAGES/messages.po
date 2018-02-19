@@ -181,7 +181,7 @@ msgstr "Құрастыруда ..."
 msgid "Current Password"
 msgstr "Ағымдағы Құпия сөз"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Басқару тақтасы"

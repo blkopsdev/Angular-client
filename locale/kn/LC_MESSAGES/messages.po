@@ -181,7 +181,7 @@ msgstr "ರಚಿಸಲಾಗುತ್ತಿದೆ ..."
 msgid "Current Password"
 msgstr "ಪ್ರಸ್ತುತ ಗುಪ್ತಪದ"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "ಡ್ಯಾಶ್ಬೋರ್ಡ್"

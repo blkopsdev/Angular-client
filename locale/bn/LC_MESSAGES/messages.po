@@ -181,7 +181,7 @@ msgstr "তৈরি করা হচ্ছে ..."
 msgid "Current Password"
 msgstr "বর্তমান পাসওয়ার্ড"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "ড্যাশবোর্ড"

@@ -181,7 +181,7 @@ msgstr "Đang tạo ..."
 msgid "Current Password"
 msgstr "Mật khẩu hiện tại"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "bảng điều khiển"

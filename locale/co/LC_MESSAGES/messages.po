@@ -181,7 +181,7 @@ msgstr "Creà ..."
 msgid "Current Password"
 msgstr "parolla d&#39;intesa attuale"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Scultura"

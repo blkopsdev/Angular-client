@@ -181,7 +181,7 @@ msgstr "Abuuritaanka ..."
 msgid "Current Password"
 msgstr "Magaca Sirta Hadda"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Dashboard"

@@ -181,7 +181,7 @@ msgstr "Krijimi ..."
 msgid "Current Password"
 msgstr "Fjalëkalimi aktual"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "baltëpritëse"

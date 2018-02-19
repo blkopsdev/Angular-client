@@ -6,7 +6,7 @@
     router.$inject = ['$stateProvider', '$urlRouterProvider', 'CONST'];
 
     function router($stateProvider, $urlRouterProvider, CONST) {
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/feed');
 
         $stateProvider
             .state('base', {
@@ -16,13 +16,13 @@
                 controller: 'rootCtrl',
                 controllerAs: 'vm'
             })
-            .state('base.login', {
-                url: '/login',
+            .state('base.feed', {
+                url: '/feed',
                 params: {
                     message: ''
                 },
-                templateUrl: CONST.getTemplateUrl('login/login.html'),
-                controller: 'loginCtrl',
+                templateUrl: CONST.getTemplateUrl('feed/feed.html'),
+                controller: 'feedCtrl',
                 controllerAs: 'vm'
             })
     }

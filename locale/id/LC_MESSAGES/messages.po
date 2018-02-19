@@ -181,7 +181,7 @@ msgstr "Menciptakan ..."
 msgid "Current Password"
 msgstr "kata sandi saat ini"
 
-#: /tmp/repo/src/dashboard/dashboard.controller.js:25
+#: /tmp/repo/src/dashboard/feed.controller.js:25
 #: /tmp/repo/src/root/root.html:19
 msgid "Dashboard"
 msgstr "Dasbor"
