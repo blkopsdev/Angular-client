@@ -3,38 +3,38 @@
 
     angular
         .module('caClient')
-        .controller('feedCtrl', feedCtrl);
+        .controller('eventsCtrl', eventsCtrl);
 
-    feedCtrl.$inject = [
+    eventsCtrl.$inject = [
         '$rootScope'
         ,'$state'
         ,'$stateParams'
 		,'gettext'
-        ,'feedService'
+        ,'eventsService'
         ,'adminService'
     ];
 
-    function feedCtrl(
+    function eventsCtrl(
 		$rootScope
         ,$state
         ,$stateParams
 		,gettext
-        ,feedService
+        ,eventsService
 	    ,adminService
     ) {
-        $rootScope.pageSubTitle = gettext('Feed');
-        $rootScope.pageSubMenu = 'Feed'; // used to show submenu
+        $rootScope.pageSubTitle = gettext('Events');
+        $rootScope.pageSubMenu = 'Events'; // used to show submenu
 
         var vm = this;
         vm.message = $stateParams.message;
-        vm.title = 'feedCtrl';
+        vm.title = 'eventsCtrl';
         vm.loading = 0;
 
         activate();
 
         function activate(){
             vm.loading =0;
-            console.log('feed control');
+            console.log('events control');
         }
     }
 

@@ -6,7 +6,7 @@
     router.$inject = ['$stateProvider', '$urlRouterProvider', 'CONST'];
 
     function router($stateProvider, $urlRouterProvider, CONST) {
-        $urlRouterProvider.otherwise('/feed');
+        // $urlRouterProvider.otherwise('/feed');
 
         $stateProvider
             .state('base', {
@@ -23,6 +23,15 @@
                 },
                 templateUrl: CONST.getTemplateUrl('feed/feed.html'),
                 controller: 'feedCtrl',
+                controllerAs: 'vm'
+            })
+            .state('base.events', {
+                url: '/events',
+                params: {
+                    message: ''
+                },
+                templateUrl: CONST.getTemplateUrl('events/events.html'),
+                controller: 'eventsCtrl',
                 controllerAs: 'vm'
             })
     }
