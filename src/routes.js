@@ -25,6 +25,15 @@
                 controller: 'feedCtrl',
                 controllerAs: 'vm'
             })
+            .state('base.docs', {
+                url: '/docs',
+                params: {
+                    message: ''
+                },
+                templateUrl: CONST.getTemplateUrl('docs/docs.html'),
+                controller: 'docsCtrl',
+                controllerAs: 'vm'
+            })
             .state('base.events', {
                 url: '/events',
                 params: {
