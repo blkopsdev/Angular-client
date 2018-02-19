@@ -44,8 +44,9 @@
             });
         };
 
+
 		function getCdnImageUrl(file,ext,width){
-			var url = apiService.getDynamicCdnUrl('/image?image=cdn/assets/'+file+'&ext='+ext+'&height=0&width='+width);
+			var url = apiService.getDynamicCdnUrl('/image?image=assets/'+file+'&ext='+ext+'&height=0&width='+width+'&bucket=aux');
 			// trust this url so angular can interpolate it in html
 			return $sce.trustAsResourceUrl(url);
 		}

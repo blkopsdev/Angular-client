@@ -6,13 +6,13 @@
         .factory('apiService', apiService);
 
     apiService.$inject = [
-    	'API_API_URL'
+    	'APP_API_URL'
 		,'DYNAMIC_CDN_API_URL'
 		,'utils'
 	];
 
     function apiService(
-        API_API_URL
+        APP_API_URL
 		,DYNAMIC_CDN_API_URL
 		,utils
 	) {
@@ -27,7 +27,7 @@
 
         function getApiUrl(path) {
 			path = path || '';
-            return API_API_URL + '/' + utils.get_host() + path;
+            return APP_API_URL + '/' + utils.get_host() + path;
         }
         function getDynamicCdnUrl(path){
 			path = path || '';

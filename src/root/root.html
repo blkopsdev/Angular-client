@@ -22,7 +22,7 @@
                 <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.users" translate>Users</a> <em>(4)</em></li>
                 <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.groups" translate>Groups</a> <em>(4)</em></li>
                 <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.profile" translate>Content</a> <em>(4)</em></li>
-                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.profile" translate>Settings</a> <em>(4)</em></li>
+                <li ng-click="vm.activeMobileMenu = false;" class="" ui-sref-active="active"><a accesskey="4" ui-sref="base.moduleSetting" translate>Modules</a> <em>(4)</em></li>
                 <li ng-click="vm.activeMobileMenu = false;" class="mobile-only">
                     <a accesskey="8" ng-click="vm.logout()" translate>Logout</a> <em>(8)</em>
                 </li>
@@ -44,26 +44,31 @@
             </ul>
         </nav>
         <nav id="sub" ng-if="adminService.isLoggedIn() && pageSubMenu == 'dashboard'">
-            <!-- dynamic pageSubTitle goes here -->
+
             <form action="./" method="post">
                 <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
                 <p>
                     <label for="dashboard-views" class="hidden">Sort by</label>
-                    <select id="dashboard-views" name="dashboard-views">
+                    <select id="dashboard-views" name="dashboard-views" ng-model="vm.view_type">
                         <option value="page-views" selected>Page Views</option>
                         <option value="page-visitors">Page Visitors</option>
                         <option value="unique-visitors">Unique Visitors</option>
                     </select>
                 </p>
             </form>
+
             <form action="" method="get">
                 <p>
                     <label for="tb">From</label>
-                    <input type="date" id="tb" name="sday" value="04/12/2017" >
+                    <span class="date-input">
+                        <input type="date" id="tb" name="sday" value="04/12/2017" >
+                    </span>
                 </p>
                 <p>
                     <label for="tc">To</label>
-                    <input type="date" id="tc" name="eday" value="04/19/2017" >
+                    <span class="date-input">
+                        <input type="date" id="tc" name="eday" value="04/19/2017" >
+                    </span>
                 </p>
                 <p class="submit">
                     <button type="submit">Submit</button>
@@ -91,6 +96,9 @@
         <nav id="sub" ng-if="adminService.isLoggedIn() && (pageSubMenu == 'groups' || pageSubMenu == 'create-group'|| pageSubMenu == 'edit-group')">
             <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
             <p class="link-a a" ng-if="pageSubMenu == 'groups'"><a ui-sref="base.createGroup"><i class="icon-plus"></i> Create</a></p>
+        </nav>
+        <nav id="sub" ng-if="adminService.isLoggedIn() && (pageSubMenu == 'modules')">
+            <h2>{{pageSubTitle? (pageSubTitle | translate ) : ''}}</h2>
         </nav>
 
     </header>

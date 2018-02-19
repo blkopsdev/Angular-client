@@ -68,7 +68,7 @@
                     })
 					.catch(function(){
 						$log.info('Cannot get self. Transition prevented. Redirect to account page');
-						//$state.go('base.login');
+						// $state.go('base.login');
 						$window.location.href = ACCOUNT_CLIENT_URL;
 					});
 			}

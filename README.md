@@ -1,4 +1,4 @@
-# ca-manage-client
+# ca-app-client
 
 ## how to start local development
 
@@ -26,7 +26,7 @@ open your personal url
 
 - `STAGE` environment variable is used to point to config file in /src/stages/env_name.json
 - `PROXY_API` env variable is used with `npm run dev`  to proxy back-end endpoints to relative API_URL so you don't have to deal with CORS.
-**default** is https://dev-api-manage.caseactive.net
+**default** is https://dev-api-app.caseactive.net
 
 ## Developers notes
 

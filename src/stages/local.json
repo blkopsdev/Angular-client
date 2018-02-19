@@ -4,7 +4,7 @@
 	"CDN_URL": "https://dev-cdn-public.caseactive.net",
 	"DYNAMIC_CDN_API_URL": "https://dev-api-cdn.caseactive.net",
 	"ACCOUNT_CLIENT_URL" : "https://blk-client-account.caseactive.net",
-	"API_API_URL": "https://dev-app-api.caseactive.net",
+	"APP_API_URL": "https://dev-api-app.caseactive.net",
 
 	"COOKIES_DOMAIN": "0.0.0.0",
 	"RECAPTCHA_KEY": "6Leg0QgUAAAAAIKQXhcPrD9wSmGBn134u8FKwD-K",

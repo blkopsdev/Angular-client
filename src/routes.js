@@ -10,22 +10,21 @@
 
         $stateProvider
             .state('base', {
-                url: '/',
+                url: '',
+                templateUrl: CONST.getTemplateUrl('root/root.html'),
                 abstract: true,
                 controller: 'rootCtrl',
-                templateUrl: CONST.getTemplateUrl('root/root.html'),
                 controllerAs: 'vm'
             })
-            .state('base.home', {
-                url: '/dashboard',
-                loginRequired: true,
+            .state('base.login', {
+                url: '/login',
                 params: {
                     message: ''
                 },
-                templateUrl: CONST.getTemplateUrl('dashboard/dashboard.html'),
-                controller: 'dashboardCtrl',
+                templateUrl: CONST.getTemplateUrl('login/login.html'),
+                controller: 'loginCtrl',
                 controllerAs: 'vm'
-            });
+            })
     }
 
 })();
