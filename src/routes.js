@@ -6,7 +6,7 @@
     router.$inject = ['$stateProvider', '$urlRouterProvider', 'CONST'];
 
     function router($stateProvider, $urlRouterProvider, CONST) {
-        // $urlRouterProvider.otherwise('/feed');
+        $urlRouterProvider.otherwise('/feed');
 
         $stateProvider
             .state('base', {
