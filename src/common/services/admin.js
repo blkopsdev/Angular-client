@@ -59,17 +59,7 @@
 					setLanguage(data.profile.locale);
 
 					// return data.profile;
-					return {
-                        // "created_by": "95b7f0c2-e5d7-4e84-b57a-c14f722bd139",
-                        // "created_on": "2018-02-09T20:40:50.758542",
-                        // "doc_id:": "7b7dfd525000",
-                        // "editLink": "https://dev-api-manage.caseactive.net/7b7dfd525000/host",
-                        // "host_id": "7b7dfd525000",
-                        // "modules": ["confirms", "events", "feed", "media", "myteam", "signs"],
-                        // "name": "Upwork Freelance",
-                        // "selfLink": "https://dev-api-manage.caseactive.net/7b7dfd525000/host",
-                        // "website": "https://upwork.com"
-					}
+					return
 				});
 		}
 

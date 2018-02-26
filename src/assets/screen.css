@@ -409,7 +409,7 @@ html.g #content > footer .form-g { margin-bottom: 20px; }
 .heading-a figure { margin-top: 52px; }
 
 .heading-b { position: relative; min-height: 83px; margin: 0 0 40px; padding: 26px 190px 16px 0; border-bottom: 1px solid #dbdbdb; background: #fff; }
-.heading-b h1, .heading-b h2, .heading-b h3, .heading-b h4, .heading-b h5, .heading-b h6 { float: left; margin: 0 17px 10px 0; color: #667074; font-size: 2.4em; font-weight: 300; }
+.heading-b h1, .heading-b h2, .heading-b h3, .heading-b h4, .heading-b h5, .heading-b h6 { float: left; margin: 0 17px 10px 0; color: #667074; font-size: 2.4em !important; font-weight: 300; }
 .heading-b .link-a { float: left; margin: 0; }
 .heading-b:before { content: ""; display: block; position: absolute; right: 30px; bottom: 0; width: 148px; height: 43px; background: url(../images/illustrations/b.svg) no-repeat; background-size: 100% 100%; }
 html.f .heading-b { margin-left: -45px; margin-right: -45px; padding-left: 45px; }
@@ -2355,7 +2355,7 @@ svg:not(:root) { overflow: hidden; }
 	/*			.form-d .submit .drop { display: block; position: relative; float: left; }
                     .form-d .submit .drop:hover { padding-bottom: 4px; }
                     .form-d .submit .drop > button, .form-d .submit .drop > .btn { overflow: visible; padding-right: 42px; }
-                        .form-d .submit .drop > button i, .form-d .submit .drop > .btn i { position: relative; top: 1px; margin-right: 4px; }	
+                        .form-d .submit .drop > button i, .form-d .submit .drop > .btn i { position: relative; top: 1px; margin-right: 4px; }
                         .form-d .submit .drop > button:before, .form-d .submit .drop > .btn:before, .form-d .submit .drop > button:after, .form-d .submit .drop > .btn:after { content: ""; display: block; position: absolute; right: -1px; top: 0; z-index: 1; width: 30px; height: 100%; border-radius: 0 3px 3px 0; background: #119db0; color: #fff; font-size: 16px; font-family: i; font-weight: 400; line-height: 30px; text-align: center; }
                             .form-d .submit .drop > button:before, .form-d .submit .drop > .btn:before { top: -1px; bottom: -1px; height: auto; }
                             .form-d .submit .drop > button:after, .form-d .submit .drop > .btn:after { content: "\e918"; top: 50%; z-index: 2; margin: -15px 0 0; }
@@ -2367,7 +2367,7 @@ svg:not(:root) { overflow: hidden; }
                             .form-d .submit .drop > span a i { display: inline-block; position: relative; left: -7px; top: 3px; width: 15px; font-size: 18px; line-height: 1px; }
                     .form-d .submit .drop > div { display: block; position: absolute; right: 16px; top: -3000em; z-index: 10; width: 30px; height: 30px; cursor: pointer; }
                     .mobile .form-d .submit .drop > div { top: 0; }
-    
+
     */
 	#root .module-d .submit > * + *,.form-d .submit > * + * { display: block; margin-top: 15px; }
 	#root .form-h p:last-child, .form-h:last-child { margin-bottom: 0; }

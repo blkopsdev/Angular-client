@@ -9,18 +9,18 @@
         '$rootScope'
         ,'$state'
         ,'$stateParams'
-		,'gettext'
+        ,'gettext'
         ,'feedService'
         ,'adminService'
     ];
 
     function feedCtrl(
-		$rootScope
+        $rootScope
         ,$state
         ,$stateParams
-		,gettext
+        ,gettext
         ,feedService
-	    ,adminService
+        ,adminService
     ) {
         $rootScope.pageSubTitle = gettext('Feed');
         $rootScope.pageSubMenu = 'Feed'; // used to show submenu
@@ -30,13 +30,16 @@
         vm.title = 'feedCtrl';
         vm.loading = 0;
 
-        activate();
+        getFeed();
 
-        function activate(){
-            vm.loading =0;
-            console.log('feed control');
+        function getFeed(){
+            feedService.getFeed('3740b557-4be5-4f42-b548-1bd21e238de5').then(function(res) {
+                debugger;
+                vm.data = res;
+            }, function(err) {
+                vm.data = null;
+            });
         }
     }
-
 })();
 
