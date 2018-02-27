@@ -11,7 +11,6 @@
         ,'utils'
         ,'$http'
         ,'$q'
-        ,'$log'
     ];
 
     function apiService(
@@ -20,7 +19,6 @@
         ,utils
         ,$http
         ,$q
-        ,$log
     ) {
         var service = {
             getApiUrl: getApiUrl
@@ -50,16 +48,9 @@
         }
 
         function getApiData(path, params) {
-            var deferred = $q.defer();
-
-            $http.get(getApiUrl(path), params).then(function(res) {
-                deferred.resolve(getData(res));
-            }, function(err) {
-                deferred.reject(err);
-                console.log(err);
-            });
-
-            return deferred.promise;
+            path = getApiUrl(path);
+            debugger;
+            return $http.get(path, params);
         }
     }
 

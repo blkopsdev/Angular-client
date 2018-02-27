@@ -10,6 +10,7 @@
         ,'$state'
         ,'$stateParams'
         ,'gettext'
+        ,'caseService'
         ,'feedService'
         ,'adminService'
     ];
@@ -19,6 +20,7 @@
         ,$state
         ,$stateParams
         ,gettext
+        ,caseService
         ,feedService
         ,adminService
     ) {
@@ -33,12 +35,19 @@
         getFeed();
 
         function getFeed(){
-            feedService.getFeed('3740b557-4be5-4f42-b548-1bd21e238de5').then(function(res) {
+            caseService.getCases().then(function (res) {
                 debugger;
-                vm.data = res;
-            }, function(err) {
-                vm.data = null;
+                var cases = res.data;
+                for (var i = 0; i < cases.length; i++) {
+                    var caseId = cases[i].case_id;
+                    feedService.getFeed(caseId).then(function(res) {
+                        vm.data = res;
+                    }, function(err) {
+                        vm.data = null;
+                    });
+                }
             });
+
         }
     }
 })();
