@@ -1,0 +1,226 @@
+<article id="content" class="module-d profile-page">
+
+    <div ng-show="vm.loading"><p class="text-center" translate>Loading...</p></div>
+    <form ng-submit="vm.saveProfile()" autocomplete="off" about=""
+           ng-hide="vm.loading"
+          novalidate>
+
+        <!-- Show email or phone verification fields here -->
+        <p class="no-margin" ca-error="vm.savingError" location="!"></p>
+
+        <h3 class="off-margin-top" translate>Basic</h3>
+        <div>
+            <span id="profileMessage">
+                <p class="notice-a success" ca-translate="vm.messages.profile"
+                   ng-if="vm.messages.profile"></p>
+            </span>
+        </div>
+        <p class="triple a mobile-hide">
+            <span class="zero-font-size">
+                <span show-empty="true" ca-error="vm.savingError" location="given_name"><span translate>First Name</span> </span>
+            </span>
+            <span class="zero-font-size">
+                <span show-empty="true" ca-error="vm.savingError" location="family_name"><span translate>Last Name</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="given_name"><span translate>First Name</span> </span>
+
+                <label for="first_name" translate>First Name</label>
+                <input id="first_name" name="first_name" placeholder="{{'First Name'|translate}}" type="text"
+                       ng-model="vm.profile.given_name" maxlength="250">
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="family_name"><span translate>Last Name</span> </span>
+
+                <label for="last_name" translate>Last Name</label>
+                <input id="last_name" name="last_name" placeholder="{{'Last Name'|translate}}" type="text"
+                       ng-model="vm.profile.family_name" maxlength="250">
+            </span>
+        </p>
+        <p class="triple a mobile-hide">
+            <span>
+                <span ca-error="vm.savingError" location="birthdate"><span translate>Date of Birth</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="gender"><span translate>Gender</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="birthdate"><span translate>Date of Birth</span> </span>
+
+                <label for="date_of_birth" translate>Date of Birth</label>
+                <input id="date_of_birth" name="date_of_birth" placeholder="{{'Date of Birth'|translate}}" type="text"
+                       ng-model="vm.profile.birthdate" maxlength="250">
+            </span>
+
+            <span>
+                <span class="mobile-only"
+                      ca-error="vm.savingError"
+                      location="gender">
+                    <span translate>Gender</span>
+                </span>
+
+                <label for="gender" translate>Gender</label>
+
+                <select id="gender" name="gender"
+                        ng-model="vm.profile.gender"
+                        ng-options="item.key as item.value for item in vm.options.genders | orderBy:'value' track by item.key">
+                       <option value=""
+                               selected
+                               disabled
+                               ng-bind="'Gender' | translate"
+                       ></option>
+                </select>
+            </span>
+        </p>
+        <h3 translate>Occupation</h3>
+        <p class="triple a mobile-hide">
+            <span>
+                <span ca-error="vm.savingError" location="company"><span translate>Company Name</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="title"><span translate>Company Title</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="company"><span translate>Company Name</span> </span>
+
+                <label for="company" translate>Company Name</label>
+                <input id="company" name="company" placeholder="{{'Company Name'|translate}}" type="text"
+                       ng-model="vm.profile.company" maxlength="250">
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="title"><span translate>Company Title</span> </span>
+
+                <label for="title" translate>Company Title</label>
+                <input id="title" name="title" placeholder="{{'Company Title'|translate}}" type="text"
+                       ng-model="vm.profile.title" maxlength="250">
+            </span>
+        </p>
+        <h3 translate>Location</h3>
+        <p class="triple a mobile-hide">
+            <span>
+                <span ca-error="vm.savingError" location="address1"><span translate>Address</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="address2"><span translate>Address 2</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="locality"><span translate>City
+                    /Locality</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="address1"><span translate>Address</span> </span>
+
+                <label for="address1" translate>Address</label>
+                <input id="address1" name="address1" placeholder="{{'Address'|translate}}" type="text"
+                       ng-model="vm.profile.address1" maxlength="250">
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="address2"><span translate>Address 2</span> </span>
+
+                <label for="address2" translate>Address 2</label>
+                <input id="address2" name="address2" placeholder="{{'Address 2'|translate}}" type="text"
+                       ng-model="vm.profile.address2" maxlength="250">
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="locality"><span translate>City/Locality</span> </span>
+
+                <label for="locality" translate>City/Locality</label>
+                <input id="locality" name="locality" placeholder="{{'City/Locality'|translate}}" type="text"
+                       ng-model="vm.profile.locality" maxlength="250">
+            </span>
+        </p>
+        <p class="triple a mobile-hide">
+            <span>
+                <span ca-error="vm.savingError" location="region"><span translate>State/Region</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="country"><span translate>Country</span> </span>
+            </span>
+            <span>
+                <span ca-error="vm.savingError" location="postal_code"><span translate>Zip/Postal Code</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="region">State/Region </span>
+
+                <label for="region" translate>State/Region</label>
+                <input id="region" name="region" placeholder="{{'State/Region'|translate}}" type="text"
+                       ng-model="vm.profile.region" maxlength="250">
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="country"><span translate>Country</span> </span>
+
+                <label for="country" translate>Country</label>
+                <select id="country" name="country" required ng-model="vm.profile.country"
+                        placeholder="{{'Country' | translate}}"
+                        ng-options="item.key as item.value for item in vm.options.countries | orderBy:'value' track by item.key">
+                    <option value=""
+                            selected
+                            disabled
+                            ng-bind="'Country' | translate"
+                    ></option>
+                </select>
+            </span>
+            <span>
+                <span class="mobile-only" ca-error="vm.savingError" location="postal_code"><span translate>Zip/Postal Code</span> </span>
+                <label for="postal_code" translate>Zip/Postal Code</label>
+                <input id="postal_code" name="postal_code" placeholder="{{'Zip/Postal Code'|translate}}" type="text"
+                       ng-model="vm.profile.postal_code" maxlength="16">
+            </span>
+        </p>
+
+        <h3 translate>Language &amp; Region</h3>
+
+        <p class="triple a">
+           <span>
+               <span ca-error="vm.savingError" location="locale"><span translate>Language</span> </span>
+
+                <label for="language" translate>Language</label>
+                <select id="language"
+                        ng-model="vm.profile.locale"
+                        name="language" required
+                        ng-options="item.key as item.value + vm.langSuffix(item) for item in vm.options.languages | orderBy:'value' track by item.key">
+                     <option value=""
+                             selected
+                             disabled
+                             ng-bind="'Language' | translate"
+                     ></option>
+                </select>
+           </span>
+
+            <span>
+                <span ca-error="vm.savingError" location="zoneinfo"><span translate>Timezone</span> </span>
+
+                <label for="timezone" translate>Timezone</label>
+                <select id="timezone" name="timezone"
+                        ng-model="vm.profile.zoneinfo"
+                        required
+                        ng-options="item.key as item.value for item in vm.options.timezones | orderBy:'value' track by item.key">
+                     <option value=""
+                             selected
+                             disabled
+                             ng-bind="'Timezone' | translate"
+                     ></option>
+                </select>
+            </span>
+        </p>
+
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.updating">
+                <span ng-show="!vm.updating" translate>Update</span>
+                <span ng-show="vm.updating" translate>Updating</span>
+            </button>
+            <a ng-click="vm.resetForm()" translate>Cancel</a>
+        </p>
+    </form>
+
+</article>

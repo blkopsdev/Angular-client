@@ -1,0 +1,79 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <form name="form" ng-submit="vm.create()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+
+        <h3 translate>Group Info</h3>
+
+        <p class="triple a">
+            <span>
+                <label for="name" translate>Name</label>
+                <input type="text" name="name" id="name" class="form-control" ng-model="vm.newData.name" required />
+                <span ca-error="vm.createError" location="name" class="field-errors"><span translate>Name</span> </span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <label for="audios" translate>Audios</label>
+                <input type="number" name="audios" id="audios" class="form-control" ng-model="vm.newData.file_size.audios" required />
+                <span ca-error="vm.createError" location="audios" class="field-errors"><span translate>Audios</span></span>
+            </span>
+            <span>
+                <label for="docs" translate>Documents</label>
+                <input type="number" name="docs" id="docs" class="form-control" ng-model="vm.newData.file_size.docs" required />
+                <span ca-error="vm.createError" location="docs" class="field-errors"><span translate>Documents</span> </span>
+            </span>
+            <span>
+                <label for="files" translate>Files</label>
+                <input type="number" name="files" id="files" class="form-control" ng-model="vm.newData.file_size.files" required />
+                <span ca-error="vm.createError" location="files" class="field-errors"><span translate>Fiels</span> </span>
+            </span>
+        </p>
+
+        <p class="triple a">
+            <span>
+                <label for="images" translate>Images</label>
+                <input type="number" name="images" id="images" class="form-control" ng-model="vm.newData.file_size.images" required />
+                <span ca-error="vm.createError" location="images" class="field-errors"><span translate>Images</span> </span>
+            </span>
+            <span>
+                <label for="videos" translate>Videos</label>
+                <input type="number" name="videos" id="videos" class="form-control" ng-model="vm.newData.file_size.videos" required />
+                <span ca-error="vm.createError" location="videos" class="field-errors"><span translate>Videos</span> </span>
+            </span>
+        </p>
+
+        <h3 translate>Group Permissions</h3>
+
+        <span ca-error="vm.createError" location="permission" class="field-errors"><span translate>Permission</span> </span>
+
+        <div ng-repeat="(name_key,permissions) in vm.module_options">
+            <h3>{{vm.module_names[name_key]}}</h3>
+            <p ng-repeat="(perm_key,perm_name) in permissions">
+                <span>
+                    <input type="checkbox" ng-model="vm.permissons[name_key][perm_key]" > {{perm_name}}
+                </span>
+            </p>
+        </div>
+
+
+        <p ca-error="vm.createError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.creating">
+                <span ng-show="!vm.creating" translate>Create</span>
+                <span ng-show="vm.creating" translate>Creating...</span>
+
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>

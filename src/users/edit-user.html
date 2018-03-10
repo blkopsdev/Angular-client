@@ -1,0 +1,50 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <div ng-show="vm.notFound">
+        <p class="text-center" translate>User not found.</p>
+    </div>
+
+    <form name="form" ng-submit="vm.save()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading && !vm.notFound">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+        <h3 translate>User Info <span class="float-right">{{vm.editData.user_id}}</span></h3>
+
+        <p class="triple a">
+            <span>
+                <label for="user_type" translate>User Type</label>
+                <select id="user_type" name="user_type" ng-model="vm.editData.user_type" required>
+                    <option value="admin">Admin</option>
+                    <option value="client">Client</option>
+
+                </select>
+                <span ca-error="vm.saveError" location="user_type" class="field-errors"><span translate>User Type</span></span>
+            </span>
+            <span>
+                <label for="user_status" translate>User Status</label>
+                <select id="user_status" name="user_status" ng-model="vm.editData.user_status" required>
+                    <option value="0">Deactive</option>
+                    <option value="1">Active</option>
+
+                </select>
+                <span ca-error="vm.saveError" location="user_status" class="field-errors"><span translate>User Status</span> </span>
+            </span>
+        </p>
+
+        <p ca-error="vm.saveError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.saving">
+                <span ng-show="!vm.saving" translate>Save</span>
+                <span ng-show="vm.saving" translate>Saving...</span>
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>

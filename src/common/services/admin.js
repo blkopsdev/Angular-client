@@ -58,8 +58,7 @@
 					updateProfile(data.profile);
 					setLanguage(data.profile.locale);
 
-					// return data.profile;
-					return
+					return data.profile;
 				});
 		}
 

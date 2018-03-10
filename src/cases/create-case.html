@@ -1,0 +1,55 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <form name="form" ng-submit="vm.createCase()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+
+        <h3 translate>Case Info</h3>
+
+        <p class="triple a">
+            <span>
+                <label for="about" translate>About</label>
+                <input type="text" name="about" id="about" class="form-control" ng-model="vm.newCaseData.about" required />
+                <span ca-error="vm.createCaseError" class="field-errors" location="about"><span translate>About</span></span>
+            </span>
+            <span>
+                <label for="tag_id" translate>Tag ID</label>
+                <input type="text" name="tag_id" id="tag_id" class="form-control" ng-model="vm.newCaseData.tag_id" required />
+                <span ca-error="vm.createCaseError" class="field-errors" location="tag_id"><span translate>Tag ID</span></span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <label for="date_opened" translate>Date Opened</label>
+                <input type="text" name="date_opened" id="date_opened" class="form-control" ng-model="vm.newCaseData.date_opened"   />
+                <span ca-error="vm.createCaseError" class="field-errors" location="date_opened"><span translate>Date Opened</span></span>
+            </span>
+            <span>
+                <label for="case_status" translate>Status</label>
+                <select id="case_status"  ng-model="vm.newCaseData.case_status" required>
+                    <option value="" selected disabled>---</option>
+                    <option value="1">Open</option>
+                    <option value="0">Closed</option>
+                </select>
+                <span ca-error="vm.createCaseError" class="field-errors" location="case_status"><span translate>Status</span></span>
+            </span>
+        </p>
+        <p ca-error="vm.createCaseError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.creatingCase">
+                <span ng-show="!vm.creatingCase" translate>Create</span>
+                <span ng-show="vm.creatingCase" translate>Creating...</span>
+
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>

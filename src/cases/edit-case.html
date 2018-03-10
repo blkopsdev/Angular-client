@@ -1,0 +1,59 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <div ng-show="vm.notFound">
+        <p class="text-center" translate>Case not found!</p>
+    </div>
+
+    <form name="form" ng-submit="vm.save()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading && !vm.notFound">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+
+        <h3 translate>Case Info <span class="float-right">{{vm.editData.case_id}}</span></h3>
+
+        <p class="triple a">
+            <span>
+                <label for="about" translate>About</label>
+                <input type="text" name="about" id="about" class="form-control" ng-model="vm.editData.about" required />
+                <span ca-error="vm.saveError" location="about" class="field-errors"><span translate>About</span></span>
+            </span>
+            <span>
+                <label for="tag_id" translate>Tag ID</label>
+                <input type="text" name="tag_id" id="tag_id" class="form-control" ng-model="vm.editData.tag_id" required />
+                <span ca-error="vm.saveError" location="tag_id" class="field-errors"><span translate>Tag ID</span></span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <label for="date_opened" translate>Date Opened</label>
+                <input type="text" name="date_opened" id="date_opened" class="form-control" ng-model="vm.editData.date_opened"   />
+                <span ca-error="vm.saveError" location="date_opened" class="field-errors"><span translate>Date Opened</span></span>
+            </span>
+            <span>
+                <label for="case_status" translate>Status</label>
+                <select id="case_status"  ng-model="vm.editData.case_status" required>
+                    <option value="" selected disabled>---</option>
+                    <option value="1">Open</option>
+                    <option value="0">Closed</option>
+                </select>
+                <span ca-error="vm.saveError" location="case_status" class="field-errors"><span translate>Status Opened</span></span>
+            </span>
+        </p>
+        <p ca-error="vm.saveError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.saving">
+                <span ng-show="!vm.saving" translate>Save</span>
+                <span ng-show="vm.saving" translate>Saving...</span>
+
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>

@@ -1,0 +1,31 @@
+
+<article id="content" class="module-d">
+    <div ng-show="vm.loading && !vm.groups">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <div ng-show="vm.empty && !vm.loading" class="text-center">
+        <p translate>No group found. </p>
+    </div>
+
+    <p class="notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+    <table class="table-b a" ng-if="vm.groups && !vm.loading && !vm.empty">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="group in vm.groups"">
+        <td>{{group.group_id.split('-')[0]}}</td>
+        <td>{{group.name}}</td>
+        <td>{{group.type}}</td>
+        <td><a ui-sref="base.editGroup({group_id:group.group_id})">Edit</a></td>
+        </tr>
+
+    </table>
+    <!--nav class="pagination-a"><ol><li class="inactive"><a>Prev</a></li><li class="active"><a class="#fakelink">1</a></li><li><a href="?type=user&page=2&orderby=id&order=desc" class='number'>2</a></li><li><a href="?type=user&page=3&orderby=id&order=desc" class='number'>3</a></li><li><a href="?type=user&page=4&orderby=id&order=desc" class='number'>4</a></li><li><a href="?type=user&page=5&orderby=id&order=desc" class='number'>5</a></li><li><span>...</span></li><li><a href="?type=user&page=776&orderby=id&order=desc" class='number'>776</a></li><li><a href="?type=user&page=777&orderby=id&order=desc" class='number'>777</a></li><li class="next"><a href="?type=user&page=2&orderby=id&order=desc">Next</a></li></ol></nav-->
+
+</article>
+

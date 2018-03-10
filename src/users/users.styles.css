@@ -1,0 +1,24 @@
+.account-page form {
+    margin-bottom: 20px;
+}
+.account-page form p.notice-a {
+    margin-bottom: 20px;
+}
+
+mobile-hide.triple {
+    margin-bottom: 0px;
+}
+
+.account-page label.small-text {
+    /*font-size: 85%;*/
+    line-height: 1.1em;
+    margin-top: 1em;
+}
+
+.account-page .no-float {
+    float: none !important;
+}
+
+#root .account-page form p.form-h-element {
+    max-width: 300px;
+}

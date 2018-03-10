@@ -3,8 +3,8 @@
 	"TERMS_OF_USE_URL": "",
 	"CDN_URL": "https://dev-cdn-public.caseactive.net",
 	"DYNAMIC_CDN_API_URL": "https://dev-api-cdn.caseactive.net",
-	"ACCOUNT_CLIENT_URL" : "https://blk-client-account.caseactive.net",
-	"APP_API_URL": "https://dev-api-app.caseactive.net",
+	"ACCOUNT_CLIENT_URL" : "https://sho-client-account.caseactive.net",
+	"MANAGE_API_URL": "https://dev-api-manage.caseactive.net",
 
 	"COOKIES_DOMAIN": "0.0.0.0",
 	"RECAPTCHA_KEY": "6Leg0QgUAAAAAIKQXhcPrD9wSmGBn134u8FKwD-K",

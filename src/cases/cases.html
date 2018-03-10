@@ -1,0 +1,284 @@
+<!--article id="content" class="module-d account-page">
+    <div ng-show="vm.loading"><p class="text-center" translate>Loading...</p></div>
+
+    <form autocomplete="off"
+          id="member-settings-form"
+          name="accountForm"
+          ng-submit="vm.saveAccount(accountForm.$valid)"
+          ng-hide="vm.loading"
+          class=" form-h member-settings-form "
+          novalidate>
+
+
+
+        <h2 class="header-d a" translate>Photo</h2>
+        <div>
+            <p class="notice-a success form-h-element"
+               id="avatarMessage"
+               ca-translate="vm.avatarMessage"
+               ng-if="vm.avatarMessage"></p>
+        </div>
+        <avatar avatar-on-upload="vm.avatarOnUpload(success, error)"
+                 avatar-is-loading="vm.uploadingAvatar">
+            <p class="file-a b">
+            <span ca-error="vm.savingPhotoError"
+                  location="profile_photo">
+                <span translate>Profile photo</span>
+            </span>
+
+                <input type="file"
+                       accept="image/*"
+                       id="profile_photo"
+                       name="profile_photo"
+                       ng-model="vm.avatarModel">
+
+                <label>
+
+
+                <span class="drag profile_preview"
+                      style="background-image:url({{adminService.getAvatarUrl('180x180')}})"
+                      translate>
+                    Add
+                </span>
+                    <span class="btn"
+                          name="avatar"
+                          avatar-trigger-button
+                          ng-hide="vm.uploadingAvatar"
+                          translate>
+                    Change file
+                </span>
+                    <span ng-show="vm.uploadingAvatar" class="btn" disabled translate>Uploading...</span>
+                </label>
+            </p>
+        </avatar>
+
+        <p class="form-h-element" ca-error="vm.savingError" location="!"></p>
+
+        <h2 class="header-d a" translate>Change Contact</h2>
+
+        <div>
+            <span ng-if="vm.messages.email">
+                <p class="notice-a success"
+                   ca-translate="vm.messages.email"></p>
+            </span>
+            <span ng-if="!vm.messages.email && vm.messages.phone">
+                <p class="notice-a success"
+                   ca-translate="vm.messages.phone"></p>
+            </span>
+        </div>
+
+        <p class="form-h-element">
+            <span>
+                <span class="" ca-error="vm.savingError" location="email"><span translate>Email</span> </span>
+                <label for="email"><span translate>Email</span>
+                </label>
+                <input id="email"
+                       class="no-float"
+                       name="email"
+                       placeholder="{{'Email'|translate}}"
+                       type="text"
+                       ng-model="vm.profile.email"
+                       maxlength="250">
+            </span>
+        </p>
+        <p ng-if="vm.profile.email_reset || vm.profile.email_verified  === false">
+            <label class="small-text">
+                    <span ng-if="vm.profile.email_verified === false && !vm.profile.email_reset">
+                        <span>{{vm.originalProfile.email}}</span>
+                        <span translate>has been claimed by another account, please, change it
+                            or</span>
+                        <a translate ng-click="vm.reclaim('email')">reclaim</a>
+                        <span translate>it</span>
+                    </span>
+
+                <span ng-if="vm.profile.email_reset">
+                        <span>
+                            <span class="close"
+                                  ng-click="vm.cancelVerify('email')"
+                            ></span>&nbsp;{{vm.profile.email_reset.alias}}
+                        </span>
+                        <span translate> pending verification: </span>
+                        <span>
+                             <a ng-click="vm.openVerifyModal('email')"
+                                translate>
+                                 verify
+                             </a>
+                        </span>
+                    </span>
+            </label>
+        </p>
+
+        <p class="form-h-element">
+            <span>
+                <span  class="" ca-error="vm.savingError" location="phone"><span translate>Phone Number</span> </span>
+                <label for="phone_number_public"><span translate>Phone Number</span>
+                </label>
+                <input class="int-phone no-float"
+                       ng-model="vm.profile.phone"
+                       ng-intl-tel-input
+                       id="phone_number_public"
+                       name="phone_number_public"
+                       placeholder=""
+                       type="text"
+                       maxlength="250">
+            </span>
+        </p>
+
+        <p ng-if="vm.profile.phone_reset || vm.profile.phone_verified  === false">
+            <label class="small-text">
+                  <span ng-if="vm.profile.phone_verified === false && !vm.profile.phone_reset">
+                        <span>{{vm.originalProfile.phone}}</span>
+                        <span translate>has been claimed by another account, please, change it
+                            or</span>
+                        <a translate  ng-click="vm.reclaim('phone')">reclaim</a>
+                        <span translate>it</span>
+                    </span>
+
+                <span ng-if="vm.profile.phone_reset">
+                        <span>
+                            <span class="close"
+                                  ng-click="vm.cancelVerify('phone')"
+                            ></span>&nbsp;{{vm.profile.phone_reset.alias}}
+                        </span>
+                        <span translate> pending verification: </span>
+                        <span>
+                             <a ng-click="vm.openVerifyModal('phone')"
+                                translate>
+                                 verify
+                             </a>
+                        </span>
+                    </span>
+            </label>
+        </p>
+
+        <h2 class="header-d a" translate>Change Password</h2>
+        <p class="notice-a success form-h-element"
+           ca-translate="vm.messages.password"
+           ng-if="vm.messages.password"></p>
+
+        <p class="form-h-element">
+            <span ca-error="vm.savingError" location="current_password"><span translate>Current Password</span> </span>
+
+            <label for="current_password" translate>Current Password</label>
+            <input id="current_password"
+                   name="current_password"
+                   ng-model="vm.password.currentPassword"
+                   autocomplete="off"
+                   placeholder="{{'Current Password'|translate}}"
+                   type="password"
+                   maxlength="250"
+            >
+        </p>
+        <p class="form-h-element">
+            <span ca-error="vm.savingError" location="new_password"><span translate>New Password</span> </span>
+
+            <label for="new_password" translate>New Password</label>
+            <input id="new_password"
+                   name="new_password"
+                   ng-model="vm.password.newPassword"
+                   autocomplete="off"
+                   placeholder="{{'New Password'|translate}}"
+                   type="password"
+                   maxlength="250"
+            >
+        </p>
+
+        <p class="form-h-element">
+            <span class="notice-a initial-font-size inline-block"
+                  ng-if="accountForm.confirm_password.$touched && accountForm.confirm_password.$error.caEqualTo"
+                  translate>
+                Confirm Password should be equal to New Password
+            </span>
+
+            <label for="confirm_password" translate>Confirm Password</label>
+            <input id="confirm_password"
+                   name="confirm_password"
+                   ng-model="vm.password.confirmPassword"
+                   ng-model-options="{ allowInvalid: true}"
+                   ca-equal-to="{{vm.password.newPassword}}"
+                   placeholder="{{'Confirm Password'|translate}}"
+                   autocomplete="off"
+                   type="password"
+                   maxlength="250"
+            >
+        </p>
+
+        <p class="submit">
+            <button type="submit" ng-disabled="accountForm.$invalid || vm.updating">
+                <span ng-show="!vm.updating" translate>Update</span>
+                <span ng-show="vm.updating" translate>Updating...</span>
+            </button>
+            <a ng-click="vm.resetForm()" translate>Cancel</a>
+        </p>
+    </form>
+
+</article-->
+
+<article id="content" class="module-d">
+    <div ng-show="vm.loading && !vm.cases">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <div ng-show="vm.emptyCases && !vm.loading" class="text-center">
+        <p translate>No cases found. </p>
+        <a ui-sref="base.createApp" translate>
+            Create a case for a business
+        </a>
+    </div>
+
+    <p class="notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+
+    <!--form action="#" method="get" class="form-f form-casesearch" ng-if="vm.cases && !vm.loading && !vm.emptyCases">
+        <p class="c">
+            <label for="fcsa" class="hidden">Keyword</label>
+            <input type="text" id="fcsa" class="searchInput" value="" ng-model="key" placeholder="Keyword">
+        </p>
+        <p class="c">
+            <label for="fcsb" class="hidden">Search Type</label>
+            <select id="fcsb" name="type">
+                <option value="Case Number" >Case Number</option>
+                <option value="Staff Name" >Staff Name</option>
+                <option value="Client Name" >Client Name</option>
+                <option value="Associate Name" >Associate Name</option>
+                <option value="Staff Email" >Staff Email</option>
+                <option value="Client Email" >Client Email</option>
+                <option value="Associate Email" >Associate Email</option>
+            </select>
+        </p>
+        <p class="submit"><button type="submit">Search</button></p>
+    </form-->
+
+
+    <table class="table-b a" ng-if="vm.cases && !vm.loading && !vm.emptyCases">
+        <tr>
+            <th>Case ID</th>
+            <th>Tag ID</th>
+            <th>About</th>
+            <th>Date Opened</th>
+            <th>Case Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr ng-repeat="case in vm.cases | filter:key" class="">
+
+            <td>{{case.case_id.split('-')[0]}}</td>
+            <td>{{case.tag_id}}</td>
+            <td>{{case.about}}</td>
+            <td>{{case.date_opened}}</td>
+            <td>{{case.case_status}}</td>
+            <td>
+                <a ui-sref="base.editCase({case_id:case.case_id})">Edit</a> &nbsp;
+                <a ui-sref="base.assignCase({case_id:case.case_id})">Assign</a>
+            </td>
+
+        </tr>
+        <tr ng-if="!vm.cases.length">
+            <td colspan="100%">No cases found</td>
+        </tr>
+
+    </table>
+    <!--nav class="pagination-a"><ol><li class="inactive"><a>Prev</a></li><li class="active"><a class="#fakelink">1</a></li><li><a href="?page=2" class='number'>2</a></li><li><a href="?page=3" class='number'>3</a></li><li><a href="?page=4" class='number'>4</a></li><li><a href="?page=5" class='number'>5</a></li><li><span>...</span></li><li><a href="?page=1372" class='number'>1372</a></li><li><a href="?page=1373" class='number'>1373</a></li><li class="next"><a href="?page=2">Next</a></li></ol></nav-->
+
+</article>
+

@@ -1,0 +1,78 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <form name="form" ng-submit="vm.createUser()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+        <h3 translate>User Info</h3>
+
+        <p class="triple a">
+            <span>
+                <label for="family_name" translate>Family Name</label>
+                <input type="text" name="family_name" id="family_name" class="form-control" ng-model="vm.newCreateUserData.family_name" required />
+                <span ca-error="vm.createUserError" location="family_name" class="field-errors"><span translate>Family Name</span></span>
+            </span>
+            <span>
+                <label for="given_name" translate>Given Name</label>
+                <input type="text" name="given_name" id="given_name" class="form-control" ng-model="vm.newCreateUserData.given_name" required />
+                <span ca-error="vm.createUserError" location="given_name" class="field-errors"><span translate>Given Name</span></span>
+            </span>
+        </p>
+        <p class="triple a">
+            <span>
+                <label for="email" translate>Email</label>
+                <input type="text" name="email" id="email" class="form-control" ng-model="vm.newCreateUserData.email" required />
+                <span ca-error="vm.createUserError" location="email" class="field-errors"><span translate>Email</span></span>
+            </span>
+            <span>
+
+
+                <label for="language" translate>Language</label>
+                <select id="language"
+                        ng-model="vm.newCreateUserData.locale"
+                        name="language" required
+                        ng-options="item.key as item.value + vm.langSuffix(item) for item in vm.options.languages | orderBy:'value' track by item.key">
+                     <option value=""
+                             selected
+                             disabled
+                             ng-bind="'Language' | translate"
+                     ></option>
+                </select>
+                <span ca-error="vm.createUserError" location="locale" class="field-errors"><span translate>Language</span> </span>
+            </span>
+            <span>
+
+
+                <label for="timezone" translate>Timezone</label>
+                <select id="timezone" name="timezone"
+                        ng-model="vm.newCreateUserData.zoneinfo"
+                        required
+                        ng-options="item.key as item.value for item in vm.options.timezones | orderBy:'value' track by item.key">
+                     <option value=""
+                             selected
+                             disabled
+                             ng-bind="'Timezone' | translate"
+                     ></option>
+                </select>
+                <span ca-error="vm.createUserError" location="zoneinfo" class="field-errors"><span translate>Timezone</span> </span>
+
+            </span>
+        </p>
+
+        <p ca-error="vm.createUserError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.creatingUser">
+                <span ng-show="!vm.creatingUser" translate>Add</span>
+                <span ng-show="vm.creatingUser" translate>Adding...</span>
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>

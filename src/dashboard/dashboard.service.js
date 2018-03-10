@@ -3,12 +3,12 @@
 
     angular
         .module('caClient')
-        .factory('docsService', docsService);
+        .factory('dashboardService', dashboardService);
 
-    docsService.$inject = ['$http', '$q', 'apiService'];
+    dashboardService.$inject = ['$http', '$q', 'apiService'];
 
     /* @ngInject */
-    function docsService($http, $q, apiService) {
+    function dashboardService($http, $q, apiService) {
         var service = {
 
         };

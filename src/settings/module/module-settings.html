@@ -1,0 +1,31 @@
+
+<article id="content" class="module-d">
+    <div ng-show="vm.loading && !vm.module_options">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <form name="form" ng-submit="vm.save()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading">
+
+        <p class="notice-a success" ng-if="vm.message" translate>Modules settings updated</p>
+
+        <table class="table-c">
+            <tr><th translate>Module</th><th translate>Status</th></tr>
+            <tr ng-repeat="(module_key,module_name) in vm.modules">
+                <td>{{module_name}}</td>
+                <td><input type="checkbox" ng-model="vm.formData[module_key]" ></td>
+            </tr>
+        </table>
+
+        <p ca-error="vm.saveError" location="!" class="field-errors"></p>
+
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.saving">
+                <span ng-show="!vm.saving" translate>Save</span>
+                <span ng-show="vm.saving" translate>Saving...</span>
+            </button>
+        </p>
+
+    </form>
+
+</article>
+

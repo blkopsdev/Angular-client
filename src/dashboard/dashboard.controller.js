@@ -3,38 +3,39 @@
 
     angular
         .module('caClient')
-        .controller('docsCtrl', docsCtrl);
+        .controller('dashboardCtrl', dashboardCtrl);
 
-    docsCtrl.$inject = [
+    dashboardCtrl.$inject = [
         '$rootScope'
         ,'$state'
         ,'$stateParams'
 		,'gettext'
-        ,'docsService'
+        ,'dashboardService'
         ,'adminService'
     ];
 
-    function docsCtrl(
+    function dashboardCtrl(
 		$rootScope
         ,$state
         ,$stateParams
 		,gettext
-        ,docsService
+        ,dashboardService
 	    ,adminService
     ) {
-        $rootScope.pageSubTitle = gettext('Docs');
-        $rootScope.pageSubMenu = 'Docs'; // used to show submenu
+        $rootScope.pageSubTitle = gettext('Dashboard');
+        $rootScope.pageSubMenu = 'dashboard'; // used to show submenu
 
         var vm = this;
         vm.message = $stateParams.message;
-        vm.title = 'docsCtrl';
+        vm.title = 'dashboardCtrl';
         vm.loading = 0;
+
 
         activate();
 
         function activate(){
             vm.loading =0;
-            console.log('docs control');
+            console.log('dashboard control');
         }
     }
 

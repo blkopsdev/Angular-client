@@ -1,0 +1,33 @@
+<article id="content" class="module-d">
+
+    <div ng-show="vm.loading">
+        <p class="text-center" translate>Loading...</p>
+    </div>
+
+    <form name="form" ng-submit="vm.addUser()" role="form" id="formcase" autocomplete="off" novalidate ng-if="!vm.loading">
+
+        <p class="form-h-element notice-a success" ca-translate="vm.message" ng-if="vm.message"></p>
+
+        <!-- Show form here -->
+
+        <p class="a">
+            <span>
+                <label for="about" translate>Email</label>
+                <input type="text" name="username" id="username" class="form-control" ng-model="vm.newAddUserData.username" required />
+                <span ca-error="vm.addUserError" location="username" class="field-errors"><span translate>Email</span></span>
+            </span>
+        </p>
+        <input type="hidden" name="user_status" ng-model="vm.newAddUserData.user_status" />
+        <input type="hidden" name="user_type" ng-model="vm.newAddUserData.user_type" />
+        <p ca-error="vm.addUserError" location="!" class="field-errors"></p>
+        <p class="submit">
+            <button type="submit" ng-disabled="vm.addingUser">
+                <span ng-show="!vm.addingUser" translate>Continue</span>
+                <span ng-show="vm.addingUser" translate>Working...</span>
+            </button>
+            <button type="reset" ng-click="vm.notInterested()" translate>Cancel</button>
+        </p>
+
+    </form>
+
+</article>
