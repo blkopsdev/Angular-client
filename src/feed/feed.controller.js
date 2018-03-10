@@ -7,22 +7,18 @@
 
     feedCtrl.$inject = [
         '$rootScope'
-        ,'$state'
         ,'$stateParams'
         ,'gettext'
         ,'caseService'
         ,'feedService'
-        ,'adminService'
     ];
 
     function feedCtrl(
         $rootScope
-        ,$state
         ,$stateParams
         ,gettext
         ,caseService
         ,feedService
-        ,adminService
     ) {
         $rootScope.pageSubTitle = gettext('Feed');
         $rootScope.pageSubMenu = 'Feed'; // used to show submenu
